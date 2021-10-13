@@ -21,13 +21,13 @@ Automating network devices with Python isn't really flexible because you're deal
 * Ability to **detect errors** when executing commands on network devices [[Sample output](https://i.imgur.com/5taJkl2.png)]
     * Default behaviour is to abort if an error was encountered
 * **Returns different outputs** as the result of commands (`STDOUT`, `STDERR`, `EXIT_CODE`) which you can use with python conditions
-* Ability to **search in a command output** using Regular Expressions. [[Example](https://gitlab.com/eslam.gomaa1/flexible_network/-/blob/main/Example-2.py#L22)]
-* Ability to **ask for confirmation** before executing a particular command [[Example](https://gitlab.com/eslam.gomaa1/flexible_network/-/blob/main/Example-2.py#L32)] [[Sample Output](https://i.imgur.com/331PPsy.png)]
-* Ability to **backup config** locally (at any point of time within your script) [[Example](https://gitlab.com/eslam.gomaa1/flexible_network/-/blob/main/Example-2.py#L29)] [[Sample Output](https://i.imgur.com/8AS8d6a.png)]
+* Ability to **search in a command output** using Regular Expressions. 
+* Ability to **ask for confirmation** before executing a particular command  [[Sample Output](https://i.imgur.com/331PPsy.png)]
+* Ability to **backup config** locally (at any point of time within your script)  [[Sample Output](https://i.imgur.com/8AS8d6a.png)]
 * List tasks with backups (Keeps the state of backups) [[Sample output](https://i.imgur.com/sKiZogL.png)]
 * Print commands outputs
-* Print commands output in `Json` [[Example](https://gitlab.com/eslam.gomaa1/flexible_network/-/blob/main/Example-2.py#L28)] [[Sample Output](https://i.imgur.com/Dgeh4kQ.png)]
-* print messages with different levels (colors) i.e  `info`, `warning`, `alert` [[Example](https://gitlab.com/eslam.gomaa1/flexible_network/-/blob/main/Example-2.py#L21)]
+* Print commands output in `Json` [[Sample Output](https://i.imgur.com/Dgeh4kQ.png)]
+* print messages with different levels (colors) i.e  `info`, `warning`, `alert` 
 
 
 
@@ -46,11 +46,13 @@ from flexible_network_.main import inventory
 hosts = inventory.text_file()
 ```
 3. [Loop](https://gitlab.com/eslam.gomaa1/flexible_network/-/blob/main/Example-2.py#L14) over the hosts in the `hosts['hosts']` variable & start use the provided methods
-
-4. Run your script using CLI
+4. Write your code using the [available methods](https://github.com/eslam-gomaa/Flexible_Network#methods-documentation) -- [Example](https://gitlab.com/eslam.gomaa1/flexible_network/-/blob/main/Example-2.py#L1)
+5. Run your script as a CLI
 ```bash
 python 3.6 <your script>.py -h
 ```
+
+
 
 **Example**
 
@@ -70,7 +72,7 @@ Execute commands on the network device
 
 
 
-##### Method options
+> Method options
 
 | Option               | Description                                                  | Default Value |
 | -------------------- | ------------------------------------------------------------ | ------------- |
@@ -93,7 +95,7 @@ Loads commands from a file & executes them 1 by 1
 
 
 
-##### Method options
+> Method options
 
 | Option               | Description                                                  | Default Value |
 | -------------------- | ------------------------------------------------------------ | ------------- |
@@ -119,7 +121,7 @@ Print messages with different levels
 
 
 
-##### Method options
+> Method options
 
 | Option | Description                                      | Default Value | Options                    |
 | ------ | ------------------------------------------------ | ------------- | -------------------------- |
@@ -134,7 +136,7 @@ Take backup from the configuration of the device & store it locally
 
 
 
-##### Method options
+> Method options
 
 | Option  | Description            | Default Value |
 | ------- | ---------------------- | ------------- |
