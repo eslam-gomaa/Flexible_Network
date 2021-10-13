@@ -20,7 +20,7 @@ Automating network devices with Python isn't really flexible because you're deal
 
 ### Why should we use this Project while we can use Ansible for network automation !
 
- Ansible provides good means for network automation, it is idempotent, gather facts, & supports config backups as well among other features
+ Ansible provides good means for network automation, it is idempotent, gathers facts, & supports config backups as well among other features
 
 But the question should be **Python vs. Ansible for network automation** and this is a controversy topic as each is suitable for different use cases
 
@@ -80,13 +80,11 @@ This project aims to improve the way we use python for network automation. :hand
 
 ---
 
-# Usage
 
 
+# Installation
 
-> ### Installation
->
-> The project will be packages as a library later, (For now you can follow the following easy steps to start using it)
+The project will be packaged as a library later, (For now you can follow the following easy steps to start using it)
 
 ```bash
 git clone https://github.com/eslam-gomaa/Flexible_Network.git
@@ -97,15 +95,19 @@ cd Flexible_Network
 
 `NOTE` -- The code was tested with `Python 3.6`
 
-0. Install the libraries
+* Install the libraries
 
 ```bash
-pip3.6 install -r /path/to/requirements.txt
+pip3.6 install -r requirements.txt
 ```
 
 
 
 ---
+
+
+
+# Usage
 
 
 
