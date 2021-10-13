@@ -6,7 +6,7 @@ This is a Python Project that aims to make network automation with Python more f
 
 ## Drive
 
-Automating network devices isn't really nice because you're dealing with a dump device (only returns output, no `STDERR`, no `exit_code` .. only output) ... which makes automating them a bit of static task
+Automating network devices with Python isn't really flexible because you're dealing with a dump device (only returns output, no `STDERR`, no `exit_code` .. only output) ... which makes automating them a bit of static task
 
 * So the main Idea of this project is give you the same feeling as automating Linux machines. by returning  different information upon executing a command on a network device, (e.g `STDOUT`, `STDERR`, `EXIT_CODE`) among others
   * That is possible by detecting errors when executing commands on network devices
@@ -62,10 +62,27 @@ python3.6 Example-2.py -f hosts.txt --task 'Day 4' --comment 'Some checks & taki
 ---
 
 ## Methods Documentation
-To be documented ... (Still in progress)
+
 
 #### `execute()`
+
 Execute commands on the network device
+
+
+
+##### Method options
+
+| Option               | Description                                                  | Default Value |
+| -------------------- | ------------------------------------------------------------ | ------------- |
+| cmd                  | Command to run on the network device                         |               |
+| cmd_from_file        | File to load commands from (will be run as 1 command)        |               |
+| print_stdout         | Print the output                                             | False         |
+| print_json           | Print the output in Json format                              | False         |
+| ask_for_confirmation | Ask for information before running specific command          | False         |
+| search               | keyword to search in the command's output (using Regular Expressions) | None          |
+| exit_on_fail         | Abort if got an error while executing the command            | True          |
+
+
 
 
 
@@ -73,6 +90,20 @@ Execute commands on the network device
 Loads commands from a file & executes them 1 by 1
 
 `NOTE` running each line 1 by 1 will detect the error faster
+
+
+
+##### Method options
+
+| Option               | Description                                                  | Default Value |
+| -------------------- | ------------------------------------------------------------ | ------------- |
+| file                 | Specify the file to load commands from (each line will run seperately) |               |
+| print_stdout         | Print the output                                             | False         |
+| print_json           | Print the output in Json format                              | False         |
+| ask_for_confirmation | Ask for information before running specific command          | False         |
+| search               | keyword to search in the command's output (using Regular Expressions) | None          |
+| exit_on_fail         | Abort if got an error while executing the command            | True          |
+
 
 
 
@@ -86,7 +117,36 @@ Print messages with different levels
 
 🔴 alert
 
-#### `backup_config`  
+
+
+##### Method options
+
+| Option | Description                                      | Default Value | Options                    |
+| ------ | ------------------------------------------------ | ------------- | -------------------------- |
+| msg    | The message to print                             |               |                            |
+| level  | The print level (Each level has different color) | 'info'        | 'info', 'warning', 'alert' |
+
+
+
+#### `backup_config()`
+
+Take backup from the configuration of the device & store it locally
+
+
+
+##### Method options
+
+| Option  | Description            | Default Value |
+| ------- | ---------------------- | ------------- |
+| Comment | Comment for the backup |               |
+
+
+
+
+
+#### `close()`
+
+Close the SSH Connection with the device
 
 
 
@@ -117,7 +177,7 @@ Example Screenshot
 
 ![image](https://user-images.githubusercontent.com/33789516/137085811-63770ec9-55e7-41ca-9c3c-22909c8047f2.png)
 
---- 
+---
 
 * Show the backups of a task
 
@@ -140,5 +200,4 @@ Output of a [Example-2.py](https://gitlab.com/eslam.gomaa1/flexible_network/-/bl
 
 
 ---
-
 
