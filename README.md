@@ -82,8 +82,6 @@ This project aims to improve the way we use python for network automation. :hand
 
 # Usage
 
-`NOTE` -- The project Tested & works well, 
-
 
 
 > ### Installation
