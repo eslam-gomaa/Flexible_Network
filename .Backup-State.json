@@ -1,0 +1,22 @@
+{
+    "Day-5__13-10-2021-07-10-42": {
+        "Backups": {
+            "192.168.11.3": [
+                {
+                    "backup": ".Backup/Day-5__13-10-2021-07-10-42/192.168.11.3__13-10-2021-07-10-46.txt",
+                    "comment": "Taking backup before running important command",
+                    "date": "13-10-2021-07-10-46"
+                },
+                {
+                    "backup": ".Backup/Day-5__13-10-2021-07-10-42/192.168.11.3__13-10-2021-07-10-50.txt",
+                    "comment": "Taking another backup",
+                    "date": "13-10-2021-07-10-50"
+                }
+            ]
+        },
+        "comment": "New test",
+        "date": "13-10-2021",
+        "task_name": "Day 5",
+        "time": "07:10:42"
+    }
+}
