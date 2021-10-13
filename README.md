@@ -70,8 +70,34 @@ This project aims to improve the way we use python for network automation. :hand
 
 ---
 
-
 # Usage
+
+
+
+> ### Installation
+>
+> Will be packages as a library later, (For now you can follow the following easy steps to start using it)
+
+```bash
+git clone https://github.com/eslam-gomaa/Flexible_Network.git
+cd Flexible_Network
+```
+
+
+
+`NOTE` -- The code was tested with `Python 3.6`
+
+0. Install the libraries
+
+```bash
+pip3.6 install -r /path/to/requirements.txt
+```
+
+
+
+---
+
+
 
 1. Create an empty Python script; [Sample Script](https://gitlab.com/eslam.gomaa1/flexible_network/-/blob/main/Example-2.py#L1)
 2. Import needed classes
@@ -86,12 +112,12 @@ hosts = inventory.text_file()
 4. Write your code using the [available methods](https://github.com/eslam-gomaa/Flexible_Network#methods-documentation) -- [Example](https://gitlab.com/eslam.gomaa1/flexible_network/-/blob/main/Example-2.py#L1)
 5. Run your script as a CLI
 ```bash
-python 3.6 <your script>.py -h
+python3.6 <your script>.py -h
 ```
 
 
 
-**Example**
+**Example*
 
 ```bash
 python3.6 Example-2.py -f hosts.txt --task 'Day 4' --comment 'Some checks & taking backups of some devices'
