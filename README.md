@@ -58,7 +58,7 @@ This project aims to improve the way we use python for network automation. :hand
 ## Supported Vendors
 
 - [x] Cisco
-- [ ] Huawei (Need some work)
+- [ ] Huawei (Needs some work)
 - [ ] *Others to be added later*
 
 
