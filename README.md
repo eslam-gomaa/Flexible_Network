@@ -39,10 +39,10 @@ Automating network devices with Python isn't really flexible because you're deal
 1. Create an empty Python script; [Sample Script](https://gitlab.com/eslam.gomaa1/flexible_network/-/blob/main/Example-2.py#L1)
 2. Import needed classes
 ```python
-from flexible_network.main import SSH_Connection
-from flexible_network.main import inventory
+from flexible_network_.main import SSH_Connection
+from flexible_network_.main import inventory
 
-# This hosts variable returns a dict i,e  {hosts: [host1, host2], hosts_number: N}
+# This 'hosts' variable returns a dict i,e  {hosts: [host1, host2], hosts_number: N}
 hosts = inventory.text_file()
 ```
 3. [Loop](https://gitlab.com/eslam.gomaa1/flexible_network/-/blob/main/Example-2.py#L14) over the hosts in the `hosts['hosts']` variable & start use the provided methods
@@ -153,7 +153,15 @@ Close the SSH Connection with the device
 
 ---
 
+
+
+## Access configurations backups 
+
+
+
 `NOTE` -- If you used the [backup_config](https://gitlab.com/eslam.gomaa1/flexible_network/-/blob/main/Example-2.py#L29) method within your script, the state of your task will be stored
+
+`NOTE` <u>Currently</u> the state is stored in a Json file in the current direction.
 
 ---
 
@@ -172,6 +180,8 @@ python3.6 Example-2.py --list
 # Date format --> day-month-year
 python3.6 Example-2.py --list --filter_date 11-10-2021
 ```
+
+
 
 Example Screenshot
 
