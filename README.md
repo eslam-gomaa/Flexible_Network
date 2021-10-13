@@ -51,6 +51,16 @@ This project aims to improve the way we use python for network automation. :hand
 
 
 
+---
+
+
+
+## Supported Vendors
+
+- [x] Cisco
+- [ ] Huawei (Need some work)
+- [ ] *Others to be added later*
+
 
 
 ---
@@ -72,11 +82,13 @@ This project aims to improve the way we use python for network automation. :hand
 
 # Usage
 
+`NOTE` -- The project Tested & works well, 
+
 
 
 > ### Installation
 >
-> Will be packages as a library later, (For now you can follow the following easy steps to start using it)
+> The project will be packages as a library later, (For now you can follow the following easy steps to start using it)
 
 ```bash
 git clone https://github.com/eslam-gomaa/Flexible_Network.git
