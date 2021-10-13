@@ -61,7 +61,7 @@ python3.6 Example-2.py -f hosts.txt --task 'Day 4' --comment 'Some checks & taki
 
 ---
 
-## Methods
+## Methods Documentation
 To be documented ... (Still in progress)
 
 #### `execute()`
@@ -85,6 +85,8 @@ Print messages with different levels
 🟡 warning
 
 🔴 alert
+
+#### `backup_config`  
 
 
 
