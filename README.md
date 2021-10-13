@@ -13,7 +13,27 @@ Automating network devices with Python isn't really flexible because you're deal
 * The above concept gave a lot of flexibility to add [more features](https://gitlab.com/eslam.gomaa1/flexible_network/-/blob/main/README.md#features)
 
 
+
 ---
+
+
+
+### Why should we use this while we can use Ansible !
+
+ Ansible provides good means for network automation, it provides it is idempotent, gather facts, & supports config backups as well
+
+But **the question should Python vs. Ansible for network automation** and this is a controversy topic as each is suitable for different use cases
+
+
+
+This project aims to improve the way we use python for network automation. :kissing_heart:
+
+
+
+
+
+---
+
 
 
 # Features
@@ -163,7 +183,7 @@ Close the SSH Connection with the device
 
 `NOTE` -- If you used the [backup_config](https://gitlab.com/eslam.gomaa1/flexible_network/-/blob/main/Example-2.py#L29) method within your script, the state of your task will be stored
 
-`NOTE` <u>Currently</u> the state is stored in a Json file in the current direction.
+`NOTE` --  **Currently** the state of backups is stored in a Json file in the current direction.
 
 ---
 
@@ -185,17 +205,21 @@ python3.6 Example-2.py --list --filter_date 11-10-2021
 
 
 
-Example Screenshot
-
-![image](https://user-images.githubusercontent.com/33789516/137085811-63770ec9-55e7-41ca-9c3c-22909c8047f2.png)
-
----
-
 * Show the backups of a task
 
 ```bash
 python3.6 Example-2.py --show Day-4__11-10-2021-09-32-01
 ```
+
+
+
+---
+
+
+
+Example Screenshot
+
+![image](https://user-images.githubusercontent.com/33789516/137085811-63770ec9-55e7-41ca-9c3c-22909c8047f2.png)
 
 
 

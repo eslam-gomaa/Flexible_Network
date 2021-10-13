@@ -18,7 +18,7 @@ for host in hosts['hosts']:
 
     connection.print("Testing using conditions...", level='info')
     check_version = connection.execute(cmd="sh version", search='Cisco IOS Software, IOSv Software', exit_on_fail=False)
-    if check_version['search_found?']:
+    if not check_version['search_found?']:
         connection.print("This device is a Cisco Switch", level='warn')
 
     connection.print('Let\'s do some more testing ... ^_^', level='info')
