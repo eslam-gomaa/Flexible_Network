@@ -26,7 +26,7 @@ But **the question should be Python vs. Ansible for network automation** and thi
 
 
 
-This project aims to improve the way we use python for network automation. :kissing_heart:
+This project aims to improve the way we use python for network automation. :hand:
 
 
 
@@ -48,6 +48,23 @@ This project aims to improve the way we use python for network automation. :kiss
 * Print commands outputs
 * Print commands output in `Json` [[Sample Output](https://i.imgur.com/Dgeh4kQ.png)]
 * print messages with different levels (colors) i.e  `info`, `warning`, `alert` 
+
+
+
+
+
+---
+
+
+
+## To be done
+
+- [ ]  supports groups in the hosts file (In other words using the same mechanism Ansible uses for the inventory)
+- [ ] Support Backup restore (Still thinking)
+
+
+
+
 
 
 
