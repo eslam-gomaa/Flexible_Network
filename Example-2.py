@@ -10,14 +10,12 @@ enable_pwd = 'cisco'
 
 # ****************************** Start **************************************
 
-print("[ INFO ] Number of hosts left: " + str(hosts['hosts_number']))
 for host in hosts['hosts']:
     connection = SSH_Connection(host, username, password, vendor='Cisco')
 
     connection.execute(cmd='enable\n' + enable_pwd)
     # connection.execute(cmd='enable\n')
 
-    # connection.execute_from_file('conf_file.txt', ask_for_confirmation=False, print_stdout=True, print_json=False)
     connection.print("Testing using conditions...", level='info')
     check_version = connection.execute(cmd="sh version", search='Cisco IOS Software, IOSv Software', exit_on_fail=False)
     if check_version['search_found?']:
@@ -34,6 +32,4 @@ for host in hosts['hosts']:
 
     # ******************************* End ***************************************
 
-    hosts['hosts_number'] -= 1
-    print('')
     connection.close()
