@@ -1,0 +1,5 @@
+conf t
+vlan 123
+name testing123
+end
+wr
