@@ -56,10 +56,39 @@ python 3.6 <your script>.py -h
 
 ```bash
 python3.6 Example-2.py -f hosts.txt --task 'Day 4' --comment 'Some checks & taking backups of some devices'
-# `--task` is important
+# --task is important
 ```
 
 ---
+
+## Methods
+To be documented ... (Still in progress)
+
+#### `execute()`
+Execute commands on the network device
+
+
+
+#### `execute_from_file()`  
+Loads commands from a file & executes them 1 by 1
+
+`NOTE` running each line 1 by 1 will detect the error faster
+
+
+
+#### `print()`  
+
+Print messages with different levels
+
+🟢 Info
+
+🟡 warning
+
+🔴 alert
+
+
+
+
 ---
 
 `NOTE` -- If you used the [backup_config](https://gitlab.com/eslam.gomaa1/flexible_network/-/blob/main/Example-2.py#L29) method within your script, the state of your task will be stored
@@ -82,6 +111,10 @@ python3.6 Example-2.py --list
 python3.6 Example-2.py --list --filter_date 11-10-2021
 ```
 
+Example Screenshot
+
+![image](https://user-images.githubusercontent.com/33789516/137085811-63770ec9-55e7-41ca-9c3c-22909c8047f2.png)
+
 --- 
 
 * Show the backups of a task
@@ -89,6 +122,8 @@ python3.6 Example-2.py --list --filter_date 11-10-2021
 ```bash
 python3.6 Example-2.py --show Day-4__11-10-2021-09-32-01
 ```
+
+
 
 ---
 
