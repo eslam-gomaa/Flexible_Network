@@ -18,11 +18,11 @@ Automating network devices with Python isn't really flexible because you're deal
 
 
 
-### Why should we use this while we can use Ansible !
+### Why should we use this Project while we can use Ansible for network automation !
 
- Ansible provides good means for network automation, it provides it is idempotent, gather facts, & supports config backups as well
+ Ansible provides good means for network automation, it is idempotent, gather facts, & supports config backups as well among other features
 
-But **the question should Python vs. Ansible for network automation** and this is a controversy topic as each is suitable for different use cases
+But **the question should be Python vs. Ansible for network automation** and this is a controversy topic as each is suitable for different use cases
 
 
 
