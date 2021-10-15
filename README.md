@@ -285,10 +285,11 @@ Example Screenshot
 
 Output of a [Example-2.py](https://gitlab.com/eslam.gomaa1/flexible_network/-/blob/main/Example-2.py)
 
-![1](https://i.imgur.com/TRcFcSN.png)
 
-![2](https://i.imgur.com/pWYqqfR.png)
+![image](https://user-images.githubusercontent.com/33789516/137480823-37854a10-4ec0-4eb5-9e2a-48f436e1b1cd.png)
 
+![image](https://user-images.githubusercontent.com/33789516/137480886-33b67446-87ed-4a6a-b85e-762ceb7e29c5.png)
+
+![image](https://user-images.githubusercontent.com/33789516/137483454-2a37fb73-0e95-40e8-8820-0cfc430e1b63.png)
 
 ---
-
