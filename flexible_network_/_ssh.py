@@ -116,13 +116,13 @@ class SSH_Connection:
         start = None
         if level == 'info':
             color = bcolors.OKGREEN
-            start = bcolors.GRAY + "-- INFO --" + bcolors.ENDC
+            start = bcolors.BOLD + bcolors.OKGREEN + "-- INFO --" + bcolors.ENDC + bcolors.ENDC
         elif level == 'warn':
             color = bcolors.WARNING
-            start = bcolors.GRAY + "-- WARNING --" + bcolors.ENDC
+            start = bcolors.BOLD + bcolors.WARNING + "-- WARNING --" + bcolors.ENDC + bcolors.ENDC
         elif level == 'alert':
             color = bcolors.FAIL
-            start = bcolors.GRAY + "-- ALERT --" + bcolors.ENDC
+            start = bcolors.BOLD + bcolors.FAIL + "-- ALERT --" + bcolors.ENDC + bcolors.ENDC
         else:
             print(
                 bcolors.FAIL + " Supported print level options are: ['info', 'warn', 'alert'] - Your input: ({})".format(
