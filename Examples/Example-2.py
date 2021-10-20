@@ -12,7 +12,7 @@ enable_pwd = 'cisco'
 # ****************************** Start **************************************
 
 for host in hosts['hosts']:
-    connection = SSH_Connection(host, username, password, vendor='Cisco')
+    connection = SSH_Connection(host, username, password, port=1113, vendor='Cisco')
 
     connection.execute(cmd='enable\n' + enable_pwd)
     # connection.execute(cmd='enable\n')
