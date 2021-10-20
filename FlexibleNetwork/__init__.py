@@ -1,14 +1,16 @@
-
 # Import 'colors' class
 from ._colors import Bcolors
+
 bcolors = Bcolors()
 
 # Import 'CLI arguments' class
 from ._cli import Argument_Parser
+
 arg_parser = Argument_Parser()
 arg_parser.argparse()
 
 from ._list_backups import List_Backups
+
 list_backups = List_Backups()
 
 if arg_parser.list_backups:
@@ -24,6 +26,6 @@ from ._ssh import SSH_Connection
 
 # Import 'Hosts file' class
 from ._hosts import Inventory
+
 inventory = Inventory()
 inventory.text_file()
-

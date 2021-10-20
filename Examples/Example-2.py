@@ -1,5 +1,6 @@
-from flexible_network_.main import SSH_Connection
-from flexible_network_.main import inventory
+# import FlexibleNetwork
+from FlexibleNetwork import SSH_Connection
+from FlexibleNetwork import inventory
 
 hosts = inventory.text_file()
 
