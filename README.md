@@ -272,15 +272,6 @@ python3.6 Example-2.py --show Day-4__11-10-2021-09-32-01
 
 
 
-Example Screenshot
-
-![image](https://user-images.githubusercontent.com/33789516/137085811-63770ec9-55e7-41ca-9c3c-22909c8047f2.png)
-
-
-
----
-
-
 ## Screenshoots
 
 Output of a [Example-2.py](https://gitlab.com/eslam.gomaa1/flexible_network/-/blob/main/Example-2.py)
