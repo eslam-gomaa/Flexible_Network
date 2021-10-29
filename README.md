@@ -205,18 +205,6 @@ Print messages with different levels
 
 
 
-#### `backup_config()`
-
-Take backup from the configuration of the device & store it locally
-
-
-
-> Method options
-
-| Option  | Description            | Default Value |
-| ------- | ---------------------- | ------------- |
-| Comment | Comment for the backup |               |
-
 <details>
     <summary>
         <b style="font-size:20px"> <code>backup_config()</code></b>
@@ -234,7 +222,7 @@ Take backup from the configuration of the device & store it locally
   
 </details>
 
-<br>
+
 
 
 <details>
