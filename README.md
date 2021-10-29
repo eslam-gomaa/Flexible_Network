@@ -141,10 +141,13 @@ python3.6 Example-2.py -f hosts.txt --task 'Day 4' --comment 'Some checks & taki
 ## Methods Documentation
 
 
-#### `execute()`
+<details>
+    <summary>
+        <b style="font-size:20px"> <code>execute()</code></b>
+    </summary>
+    <br>
 
 Execute commands on the network device
-
 
 
 > Method options
@@ -159,11 +162,19 @@ Execute commands on the network device
 | search               | keyword to search in the command's output (using Regular Expressions) | None          |
 | exit_on_fail         | Abort if got an error while executing the command            | True          |
 
+    
+<br>  
+</details>
+
+<br>
 
 
+<details>
+    <summary>
+        <b style="font-size:20px"> <code>execute_from_file()</code></b>
+    </summary>
+    <br>
 
-
-#### `execute_from_file()`  
 Loads commands from a file & executes them 1 by 1
 
 `NOTE` running each line 1 by 1 will detect the error faster
@@ -181,10 +192,19 @@ Loads commands from a file & executes them 1 by 1
 | search               | keyword to search in the command's output (using Regular Expressions) | None          |
 | exit_on_fail         | Abort if got an error while executing the command            | True          |
 
+    
+<br>  
+</details>
+
+<br>
 
 
 
-#### `print()`  
+<details>
+    <summary>
+        <b style="font-size:20px"> <code>print()`</code></b>
+    </summary>
+    <br>
 
 Print messages with different levels
 
@@ -202,7 +222,11 @@ Print messages with different levels
 | ------ | ------------------------------------------------ | ------------- | -------------------------- |
 | msg    | The message to print                             |               |                            |
 | level  | The print level (Each level has different color) | 'info'        | 'info', 'warning', 'alert' |
+    
+<br>  
+</details>
 
+<br>
 
 
 <details>
@@ -236,6 +260,7 @@ Close the SSH Connection with the device
   
 </details>
 
+<br>
 
 
 
