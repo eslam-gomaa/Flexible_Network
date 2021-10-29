@@ -202,7 +202,7 @@ Loads commands from a file & executes them 1 by 1
 
 <details>
     <summary>
-        <b style="font-size:20px"> <code>print()`</code></b>
+        <b style="font-size:20px"> <code>print()</code></b>
     </summary>
     <br>
 
