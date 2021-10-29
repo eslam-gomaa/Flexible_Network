@@ -219,11 +219,19 @@ Take backup from the configuration of the device & store it locally
 
 
 
-
-
-#### `close()`
-
+<details>
+    <summary>
+        <b style="font-size:20px"><mark style="background-color: #fffccd"> close()</b>
+    </summary>
+    <br>
+    
 Close the SSH Connection with the device
+    <br>
+  
+</details>
+
+
+
 
 
 
