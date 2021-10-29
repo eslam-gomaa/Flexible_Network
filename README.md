@@ -217,11 +217,29 @@ Take backup from the configuration of the device & store it locally
 | ------- | ---------------------- | ------------- |
 | Comment | Comment for the backup |               |
 
+<details>
+    <summary>
+        <b style="font-size:20px"> <code>backup_config()</code></b>
+    </summary>
+    <br>
+
+Take backup from the configuration of the device & store it locally
+
+> Method options
+
+| Option  | Description            | Default Value |
+| ------- | ---------------------- | ------------- |
+| Comment | Comment for the backup |               |
+    <br>
+  
+</details>
+
+<br>
 
 
 <details>
     <summary>
-        <b style="font-size:20px"><mark style="background-color: #fffccd"> close()</b>
+        <b style="font-size:20px"> <code>close()</code></b>
     </summary>
     <br>
     
