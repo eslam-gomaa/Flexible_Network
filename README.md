@@ -218,11 +218,11 @@ Take backup from the configuration of the device & store it locally
 | Option  | Description            | Default Value |
 | ------- | ---------------------- | ------------- |
 | Comment | Comment for the backup |               |
-    <br>
-  
+    
+<br>  
 </details>
 
-
+<br>
 
 
 <details>
