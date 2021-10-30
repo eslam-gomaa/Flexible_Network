@@ -61,7 +61,7 @@ This project aims to improve the way we use python for network automation. :hand
 - [ ] Huawei (Needs some work)
 - [ ] *Others to be added later*
 
-
+<br>
 
 ---
 
@@ -73,10 +73,7 @@ This project aims to improve the way we use python for network automation. :hand
 - [ ] Support Backup restore (Still thinking)
 
 
-
-
-
-
+<br>
 
 ---
 
@@ -84,24 +81,21 @@ This project aims to improve the way we use python for network automation. :hand
 
 # Installation
 
-The project will be packaged as a library later, (For now you can follow the following easy steps to start using it)
+1. Build the library From source
+
 
 ```bash
 git clone https://github.com/eslam-gomaa/Flexible_Network.git
+
 cd Flexible_Network
+
+python3.6 setup.py bdist_wheel
+pip3.6 install Flexible_Network/dist/FlexibleNetwork-*.whl
 ```
-
-
 
 `NOTE` -- The code was tested with `Python 3.6`
 
-* Install the libraries
-
-```bash
-pip3.6 install -r requirements.txt
-```
-
-
+<br>
 
 ---
 
@@ -114,8 +108,8 @@ pip3.6 install -r requirements.txt
 1. Create an empty Python script; [Sample Script](https://gitlab.com/eslam.gomaa1/flexible_network/-/blob/main/Example-2.py#L1)
 2. Import needed classes
 ```python
-from flexible_network_.main import SSH_Connection
-from flexible_network_.main import inventory
+from FlexibleNetwork import SSH_Connection
+from FlexibleNetwork import inventory
 
 # This 'hosts' variable returns a dict i,e  {hosts: [host1, host2], hosts_number: N}
 hosts = inventory.text_file()
