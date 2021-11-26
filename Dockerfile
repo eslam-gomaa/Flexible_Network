@@ -4,6 +4,6 @@ RUN mkdir test
 WORKDIR test
 RUN git clone https://github.com/eslam-gomaa/Flexible_Network.git
 RUN cd Flexible_Network && python3.6 setup.py bdist_wheel
-RUN pip3.6 install Flexible_Network/dist/FlexibleNetwork-*.whl
+RUN pip3.6 install dist/FlexibleNetwork-*.whl
 
 CMD /bin/bash
