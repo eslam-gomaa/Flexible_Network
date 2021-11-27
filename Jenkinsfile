@@ -11,6 +11,7 @@ pipeline {
         kind: Pod
         metadata:
           name: cd
+          namespace: build
           label:
             app: python
         spec:
@@ -24,7 +25,12 @@ pipeline {
             volumeMounts:
             - name: docker-socket
               mountPath: /var/run/docker.sock
-            workingDir: /workspace
+              workingDir: /workspace
+          volumes:
+          - name: docker-socket
+            hostPath:
+              path: /var/run/docker.sock
+              type: Socket
         '''
     }
   }
