@@ -1,9 +1,9 @@
 pipeline {
-  environment { 
-    registry = "https://registry.hub.docker.com/eslamgomaa" 
-    registryCredential = 'docker_hub_id' 
-    dockerImage = '' 
-  }
+//   environment { 
+//     registry = "https://registry.hub.docker.com/eslamgomaa" 
+//     registryCredential = 'docker_hub_id' 
+//     dockerImage = '' 
+//   }
   agent {
     kubernetes {
       yaml '''
@@ -32,7 +32,7 @@ pipeline {
     stage('Cloning the Git Repo') { 
       steps { 
         git branch: 'main',
-            credentialsId: 'f0a87b6b-822e-4502-8051-47a170675cc3',
+            credentialsId: 'github_id',
             url: 'https://github.com/eslam-gomaa/Flexible_Network.git'
         sh 'pwd'
         sh 'ls -lh'
