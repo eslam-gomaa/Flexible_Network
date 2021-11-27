@@ -37,7 +37,7 @@ pipeline {
   stages {
     stage('Cloning the Git Repo') { 
       steps { 
-        git branch: 'main',
+        git branch: 'master',
             credentialsId: 'github_id',
             url: 'https://github.com/eslam-gomaa/Flexible_Network.git'
         sh 'pwd'
