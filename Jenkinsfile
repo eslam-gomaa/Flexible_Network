@@ -64,11 +64,8 @@ pipeline {
     stage('Push library to PyPi') {
       steps {
         container('python') {
-          script { 
-            // docker.withRegistry( registry, registryCredential ) { 
-            //   docker.image("eslamgomaa/dockerizing-ruby-drkiq:${env.BUILD_NUMBER}").push("${env.BUILD_NUMBER}")
-            //   docker.image("eslamgomaa/dockerizing-ruby-drkiq:${env.BUILD_NUMBER}").push("latest")
-            }
+            sh 'pip3.6 install twine'
+            sh "twine upload -u Eslam-Gomaa -p '0b@pGI#FbKigVBPYuYnT!oQiG5lf0a1CW'  dist/* --verbose"
           }
         }
       }
