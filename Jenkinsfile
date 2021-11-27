@@ -50,9 +50,7 @@ pipeline {
           script {
             echo 'Building the library'
             sh 'ls -lh'
-            sh  '''cd Flexible_Network && python3.6 setup.py bdist_wheel
-                   pip3.6 install dist/FlexibleNetwork-*.whl
-                '''
+            sh  'cd Flexible_Network && python3.6 setup.py bdist_wheel && pip3.6 install dist/FlexibleNetwork-*.whl'
             echo 'Run Unit tests'
             // Need to be written 😅
           }
