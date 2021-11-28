@@ -2,7 +2,7 @@ pipeline {
   environment {
     PYPI = credentials('pypi_id')  
   }
-  agent {
+  agent options { skipDefaultCheckout() } {
     kubernetes {
       yaml '''
         apiVersion: v1
@@ -77,6 +77,7 @@ pipeline {
         container('python') {
             sh 'pip3.6 install twine'
             sh "twine upload --skip-existing -u ${PYPI_USR} -p '${PYPI_PSW}'  dist/* --verbose"
+            slackSend color: 'good', message: "FlexibleNetwork library built successfully & Uploaded to PyPi \n Build number: ${env.BUILD_NUMBER}"
           }
         }
       }
