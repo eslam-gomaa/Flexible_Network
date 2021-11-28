@@ -32,6 +32,26 @@ pipeline {
         '''
     }
   }
+  post {  
+         always {  
+             slackSend color: 'good', message: "always"
+         }  
+         success {  
+             slackSend color: 'good', message: "Job number: ${env.JOB_NAME} \nBuild number: ${env.BUILD_NUMBER} \nBuild URL: ${env.BUILD_URL} \nFlexibleNetwork library built successfully & Uploaded to PyPi"
+         }  
+         failure {  
+             slackSend color: 'danger', message: "Job number: ${env.JOB_NAME} \nBuild number: ${env.BUILD_NUMBER} \nBuild URL: ${env.BUILD_URL} \nFlexibleNetwork library build failed"
+            //  mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "foo@foomail.com";  
+         }  
+         unstable {  
+             slackSend color: 'danger', message: "Job number: ${env.JOB_NAME} \nBuild number: ${env.BUILD_NUMBER} \nBuild URL: ${env.BUILD_URL} \nFlexibleNetwork library build failed (Unstable)" 
+         }  
+         changed {  
+            echo 'Changed.'
+            //  echo 'This will run only if the state of the Pipeline has changed'  
+            //  echo 'For example, if the Pipeline was previously failing but is now successful'  
+         }  
+     } 
   stages {
     stage('Cloning the Git Repo') { 
       steps { 
@@ -77,7 +97,6 @@ pipeline {
         container('python') {
             sh 'pip3.6 install twine'
             sh "twine upload --skip-existing -u ${PYPI_USR} -p '${PYPI_PSW}'  dist/* --verbose"
-            slackSend color: 'good', message: "FlexibleNetwork library built successfully & Uploaded to PyPi \n Build number: ${env.BUILD_NUMBER}"
           }
         }
       }
