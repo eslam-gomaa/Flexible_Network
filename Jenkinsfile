@@ -33,9 +33,9 @@ pipeline {
     }
   }
   post {  
-         always {  
-            //  slackSend color: 'good', message: "always"
-         }  
+        //  always {  
+        //      slackSend color: 'good', message: "always"
+        //  }  
          success {  
              slackSend color: 'good', message: "💚 \nJob name: ${env.JOB_NAME} \nBuild number: ${env.BUILD_NUMBER} \nBuild URL: ${env.BUILD_URL} \nFlexibleNetwork library built successfully & Uploaded to PyPi"
          }  
@@ -46,11 +46,11 @@ pipeline {
          unstable {  
              slackSend color: 'danger', message: "💣 \nJob name: ${env.JOB_NAME} \nBuild number: ${env.BUILD_NUMBER} \nBuild URL: ${env.BUILD_URL} \nFlexibleNetwork library build failed (Unstable)" 
          }  
-         changed {  
-            // echo 'Changed.'
-            //  echo 'This will run only if the state of the Pipeline has changed'  
-            //  echo 'For example, if the Pipeline was previously failing but is now successful'  
-         }  
+        //  changed {  
+        //      echo 'Changed.'
+        //      echo 'This will run only if the state of the Pipeline has changed'  
+        //      echo 'For example, if the Pipeline was previously failing but is now successful'  
+        //  }  
      } 
   stages {
     stage('Cloning the Git Repo') { 
