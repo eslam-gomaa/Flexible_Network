@@ -2,7 +2,7 @@ pipeline {
   environment {
     PYPI = credentials('pypi_id')  
   }
-  agent options { skipDefaultCheckout() } {
+  agent {
     kubernetes {
       yaml '''
         apiVersion: v1
