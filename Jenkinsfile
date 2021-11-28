@@ -96,7 +96,7 @@ pipeline {
       steps {
         container('python') {
             sh 'pip3.6 install twine'
-            sh "twine upload typo --skip-existing -u ${PYPI_USR} -p '${PYPI_PSW}'  dist/* --verbose"
+            sh "twine upload --skip-existing -u ${PYPI_USR} -p '${PYPI_PSW}'  dist/* --verbose"
           }
         }
       }
