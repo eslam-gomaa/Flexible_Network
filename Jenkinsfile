@@ -1,9 +1,7 @@
 pipeline {
-//   environment { 
-//     registry = "https://registry.hub.docker.com/eslamgomaa" 
-//     registryCredential = 'docker_hub_id' 
-//     dockerImage = '' 
-//   }
+  environment {
+    PYPI = credentials('pypi_id')  
+  }
   agent {
     kubernetes {
       yaml '''
@@ -70,7 +68,7 @@ pipeline {
       steps {
         container('python') {
             sh 'pip3.6 install twine'
-            sh "twine upload -u Eslam-Gomaa -p '0b@pGI#FbKigVBPYuYnT!oQiG5lf0a1CW'  dist/* --verbose"
+            sh "twine upload -u ${PYPI_USR} -p '${PYPI_PSW}'  dist/* --verbose"
           }
         }
       }
