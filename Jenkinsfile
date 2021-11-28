@@ -42,7 +42,7 @@ pipeline {
         sh 'ls -lh'
       }
     }
-    stage('Build the Library & Run Unit tests') {
+    stage('Build the Library') {
       steps {
         container('python') {
           script {
@@ -50,6 +50,14 @@ pipeline {
             sh 'ls -lh'
             sh  '''python3.6 setup.py bdist_wheel &&
                    pip3.6 install dist/FlexibleNetwork-*.whl'''
+          }
+        }
+      }
+    }
+    stage('Run Unit tests') {
+      steps {
+        container('python') {
+          script {
             echo 'Run Unit tests'
             // Need to be written 😅
           }
