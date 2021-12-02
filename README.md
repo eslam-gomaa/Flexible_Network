@@ -81,7 +81,16 @@ This project aims to improve the way we use python for network automation. :hand
 
 # Installation
 
-1. Build the library From source
+
+```
+pip3 install FlexibleNetwork
+``
+
+
+
+---
+
+##### Build the library From source
 
 
 ```bash
