@@ -2,7 +2,15 @@
 
 This is a Python Project that aims to make network automation with Python more flexible
 
+<br>
+
 ---
+
+#### 👉 Deprecated in favor of [Flexible-Network](https://github.com/eslam-gomaa/Flexible-Network)  [ Better performance / cleaner code / better features ]
+
+---
+
+<br>
 
 ## Drive
 
